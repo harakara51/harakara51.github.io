@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Bingo.Seed&apos; to &apos;BingoSeed&apos;&#x0A;- Original project: &apos;Bingo&apos;&#x0A;- Original element: &apos;Bingo.Seed&apos;&#x0A;- Renamed element: &apos;Bingo.BingoSeed&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Seed&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Bingo{Seed.java[Seed" matchStrategy="1" name="BingoSeed" qualified="false" references="true" similarDeclarations="false" stamp="1451940066404" textual="false" version="1.0"/>
+</session>

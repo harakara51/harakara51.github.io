@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+
+public class BJtester
+{
+
+	public static void main(String[] args)
+	{
+		ArrayList<CardsGUI> Deck = new ArrayList<CardsGUI>();
+		
+		
+		
+		String[] suit =
+			{ "Hearts", "Diamonds", "Spades", "Clubs" };
+			int[] number =
+			{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+
+			for (int i = 0; i < suit.length - 1; i++)
+			{
+				for (int k = 0; k < number.length - 1; k++)
+				{
+					int Value;
+					char num = (char)number[k];
+					int Number = number[k];
+					String Suit = suit[i];
+					String Name = suit[i] + " " + num;
+					String Path = "Images/" + Name + ".png";
+					if (k < 10)
+					{
+						Value = number[k];
+					} else
+						Value = 10;
+
+					CardsGUI Card = new CardsGUI(Number, Suit, Name, Path);
+					Deck.add(Card);
+				}
+			}
+		
+			for (int i =0; i <(Deck.size()-1); i++)
+			{
+				System.out.println(Deck.get(i).getName() + "  "+Deck.get(i).getNumber() + " " + Deck.get(i).getPath() + " " + Deck.get(i).getValue() + "  " + Deck.get(i).getSuit());
+			}
+			
+			
+	}
+
+}

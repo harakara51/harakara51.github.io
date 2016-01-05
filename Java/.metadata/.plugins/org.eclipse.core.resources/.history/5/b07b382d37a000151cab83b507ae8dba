@@ -1,0 +1,45 @@
+package examples;
+
+import solutions.Color;
+
+public class Rectangle extends Shape
+{
+
+	private int width;
+	private int height;
+	private int area;
+	
+	public Rectangle()
+	{
+		this (0,0);
+	}
+
+	
+	
+	public Rectangle(int width, int height)
+	{
+		super();
+		this(0, 0, w, h);
+	}
+	
+	@Override
+	public void getArea()
+	{
+		area = width * height;
+
+	}
+
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString()
+	{
+		return "Rectangle [width=" + width + ", height=" + height + ", area=" + area + "]";
+	}
+ 
+
+
+}

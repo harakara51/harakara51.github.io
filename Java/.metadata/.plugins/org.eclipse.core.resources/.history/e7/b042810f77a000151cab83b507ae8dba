@@ -1,0 +1,79 @@
+package LoO;
+
+import java.util.ArrayList;
+
+public class Maps
+{
+private String Name;
+private String Discription;
+ArrayList<String> item = new ArrayList<String> ();
+
+
+public Maps(String name, String discription, ArrayList<String> item)
+{
+	super();
+	Name = name;
+	Discription = discription;
+	this.item = item;
+}
+
+
+/**
+ * @return the name
+ */
+public String getName()
+{
+	return Name;
+}
+
+
+/**
+ * @return the discription
+ */
+public String getDiscription()
+{
+	return Discription;
+}
+
+
+/**
+ * @return the item
+ */
+public ArrayList<String> getItem()
+{
+	return item;
+}
+
+
+/**
+ * @param name the name to set
+ */
+public void setName(String name)
+{
+	Name = name;
+}
+
+
+/**
+ * @param discription the discription to set
+ */
+public void setDiscription(String discription)
+{
+	Discription = discription;
+}
+
+
+/**
+ * @param item the item to set
+ */
+public void setItem(ArrayList<String> item)
+{
+	this.item = item;
+}
+
+
+
+
+
+
+}

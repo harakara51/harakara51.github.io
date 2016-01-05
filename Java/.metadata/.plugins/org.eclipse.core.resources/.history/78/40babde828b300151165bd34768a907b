@@ -1,0 +1,108 @@
+package Bingo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BingoSeed
+{
+
+	private int Value;
+	private List<Integer> Values = new ArrayList<>();
+	String alphabet;
+	private List<Character> alpha = new ArrayList<>();
+	private int wins;
+	/**
+	 * @return the name
+	 */
+	public BingoSeed(String name)
+	{
+		super();		
+		setValue();
+		this.alphabet = name;
+	}
+	
+	public void setValue()
+	{
+	
+	Value = (int)Math.random()*50;
+
+	}
+	
+	
+
+
+
+
+	/**
+	 * @param wins the wins to set
+	 */
+	public void setWins(int wins)
+	{
+		this.wins += wins;
+	}
+
+	public void setWins2(int wins)
+	{
+		this.wins = 1;
+	}
+
+	/**
+	 * @return the values
+	 */
+	public List<Integer> getValues()
+	{
+		return Values;
+	}
+
+	/**
+	 * @return the alphabet
+	 */
+	public String getAlphabet()
+	{
+		return alphabet;
+	}
+
+	/**
+	 * @return the alpha
+	 */
+	public List<String> getAlpha()
+	{
+		return alpha;
+	}
+
+	/**
+	 * @param values the values to set
+	 */
+	public void setValues(List<Integer> values)
+	{
+		for (int i  = 0; i <50; i ++)
+		{
+			values.add(i);
+		}
+	}
+
+	/**
+	 * @param alphabet the alphabet to set
+	 */
+	public void setAlphabet(String alphabet)
+	{
+		this.alphabet = alphabet;
+	}
+
+	/**
+	 * @param alpha the alpha to set
+	 */
+	public void setAlpha(List<String> alpha)
+	{
+		String Bingo = "bingo";
+		for(int i =0; i <Bingo.length(); i ++)
+		{
+			
+			alpha =Bingo.charAt(i);
+		}
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,26 @@
+package Bingo;
+
+public class BingoTester
+{
+	public static BingoSeed test = new BingoSeed();
+	private static int gameStatus;
+	public static void main(String[] args)
+	{
+		while(gameStatus !=5)
+		{
+		
+		
+		
+		System.out.println("New Bingo Alphabet is : "+ test.getAlphabet());
+		System.out.println("New Bingo Number is : "+ test.getValue());
+		test.setTestSize();
+		String result = test.getResult();
+		System.out.println(result);
+		}
+	}
+	
+	public static void newBingoValues ()
+	{
+		
+	}
+}

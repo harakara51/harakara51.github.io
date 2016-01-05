@@ -1,0 +1,62 @@
+package examples;
+
+public class Circle extends Shape
+{
+	private int radius;
+	private double area;
+	
+	
+
+	public Circle(int radius)
+	{
+		super();
+		this.radius = radius;
+	}
+	
+
+	
+	
+	@Override
+	public void getArea()
+	{
+		area = radius * (Math.pow(Math.PI, 2));
+	}
+
+
+
+
+	/**
+	 * @return the radius
+	 */
+	public int getRadius()
+	{
+		return radius;
+	}
+
+
+
+
+	/**
+	 * @param radius the radius to set
+	 */
+	public void setRadius(int radius)
+	{
+		this.radius = radius;
+	}
+
+
+
+
+	/**
+	 * @param area the area to set
+	 */
+	public void setArea(double area)
+	{
+		this.area = area;
+	}
+
+	
+
+
+
+}

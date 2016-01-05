@@ -1,0 +1,64 @@
+import java.util.ArrayList;
+
+public class Deckbuilder
+{
+private CardsGUI Cards;
+private App Card;
+private ArrayList<CardsGUI> Deck;
+
+
+
+
+CardsGUI club9 = new CardsGUI(9, "Clubs" , "Clubs 9");
+
+
+
+
+/**
+ * @return the cards
+ */
+public CardsGUI getCards()
+{
+	return Cards;
+}
+
+
+
+
+/**
+ * @return the deck
+ */
+public ArrayList<CardsGUI> getDeck()
+{
+	return Deck;
+}
+
+
+
+
+/**
+ * @param cards the cards to set
+ */
+public void setCards(CardsGUI cards)
+{
+	Cards = cards;
+}
+
+
+
+
+/**
+ * @param deck the deck to set
+ */
+public void setDeck()
+{
+	App test1 = new App();
+	CardsGUI club9 = new CardsGUI(9, "Clubs" , "Clubs 9", test1);
+	Deck.add(club9);
+
+}
+
+
+
+
+}

@@ -1,0 +1,33 @@
+package Bingo;
+
+import java.util.Scanner;
+
+public class BingoTester
+{
+	public static BingoSeed test = new BingoSeed();
+	private static int gameStatus;
+	public static void main(String[] args)
+	{
+		while(gameStatus !=5)
+		{
+		Scanner keyboard = new Scanner(System.in);
+		
+			if (gameStatus ==0)
+				{
+				System.out.println("Press 1 to print out the next Bingo Value?");
+
+				
+				}
+		
+		
+		}
+	}
+	
+	public static void newBingoValues ()
+	{
+		System.out.println("New Bingo Alphabet is : "+ test.getAlphabet());
+		System.out.println("New Bingo Number is : "+ test.getValue());
+		String result = test.getResult();
+		System.out.println(result);
+	}
+}

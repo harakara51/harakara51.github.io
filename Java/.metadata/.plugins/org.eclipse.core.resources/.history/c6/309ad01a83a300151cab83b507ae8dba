@@ -1,0 +1,32 @@
+package examples;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+
+public class ReadFiles
+{
+	public static int lineCount;
+	public static void main(String[] args) {
+        try {
+            FileReader fr = new FileReader("pet.txt");
+            BufferedReader buf = new BufferedReader(fr);
+
+            String line;
+            while ((line = buf.readLine()) != null) {
+                System.out.println(line);
+                
+                lineCount++;
+            }
+
+            buf.close();
+            System.out.println(lineCount);
+        }
+        catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+}
+
+

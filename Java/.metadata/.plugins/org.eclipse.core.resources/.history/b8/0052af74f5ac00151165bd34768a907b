@@ -1,0 +1,13 @@
+
+public class BJtester
+{
+
+	public static void main(String[] args)
+	{
+		CardsGUI card1 = new CardsGUI(10, "Clubs", "Clubs 9");
+		App test = new App();
+		
+		test.setPath("Images/_Joker r.png");
+	}
+
+}

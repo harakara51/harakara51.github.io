@@ -1,0 +1,141 @@
+package examples;
+
+public class Presidents
+{
+	//private int termNumber, startYear, endYear;
+	private String firstName, middleName, lastName, party, termNumber, startYear, endYear;
+	public Presidents(String termNumber, String startYear, String endYear, String firstName, String middleName, String lastName,
+			String party)
+	{
+		super();
+		this.termNumber = termNumber;
+		this.startYear = startYear;
+		this.endYear = endYear;
+		this.firstName = firstName;
+		this.middleName = middleName;
+		this.lastName = lastName;
+		this.party = party;
+	}
+	/**
+	 * @return the termNumber
+	 */
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString()
+	{
+		return "Presidents [termNumber=" + termNumber + ", startYear=" + startYear + ", endYear=" + endYear
+				+ ", firstName=" + firstName + ", middleName=" + middleName + ", lastName=" + lastName + ", party="
+				+ party + "]";
+	}
+	/**
+	 * @return the firstName
+	 */
+	public String getFirstName()
+	{
+		return firstName;
+	}
+	/**
+	 * @return the middleName
+	 */
+	public String getMiddleName()
+	{
+		return middleName;
+	}
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName()
+	{
+		return lastName;
+	}
+	/**
+	 * @return the party
+	 */
+	public String getParty()
+	{
+		return party;
+	}
+	/**
+	 * @return the termNumber
+	 */
+	public String getTermNumber()
+	{
+		return termNumber;
+	}
+	/**
+	 * @return the startYear
+	 */
+	public String getStartYear()
+	{
+		return startYear;
+	}
+	/**
+	 * @return the endYear
+	 */
+	public String getEndYear()
+	{
+		return endYear;
+	}
+	/**
+	 * @param firstName the firstName to set
+	 */
+	public void setFirstName(String firstName)
+	{
+		this.firstName = firstName;
+	}
+	/**
+	 * @param middleName the middleName to set
+	 */
+	public void setMiddleName(String middleName)
+	{
+		this.middleName = middleName;
+	}
+	/**
+	 * @param lastName the lastName to set
+	 */
+	public void setLastName(String lastName)
+	{
+		this.lastName = lastName;
+	}
+	/**
+	 * @param party the party to set
+	 */
+	public void setParty(String party)
+	{
+		this.party = party;
+	}
+	/**
+	 * @param termNumber the termNumber to set
+	 */
+	public void setTermNumber(String termNumber)
+	{
+		this.termNumber = termNumber;
+	}
+	/**
+	 * @param startYear the startYear to set
+	 */
+	public void setStartYear(String startYear)
+	{
+		this.startYear = startYear;
+	}
+	/**
+	 * @param endYear the endYear to set
+	 */
+	public void setEndYear(String endYear)
+	{
+		this.endYear = endYear;
+	}
+	public void display ()
+	{
+		System.out.println("President's first name is: "+ firstName+ "last name is : " + lastName+ " The term number is : " + termNumber + 
+				"the startYear is : " + startYear +"The end year is :"+ endYear +"the party is : " + party);
+		
+	}
+
+	
+	
+	
+}

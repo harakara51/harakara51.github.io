@@ -1,0 +1,54 @@
+package examples;
+
+public class Text implements Drawable
+{
+	private String Value;
+	
+	
+	public Text(String value)
+	{
+		Value = value;
+	}
+	
+	
+	public Text (int x, int y, Color c, String T)
+	{
+		super(x, y, c);
+		this.Value = T;
+	}
+	
+	public void drawable ()
+	{
+		System.out.println( Value );
+	}
+
+
+
+	/**
+	 * @return the value
+	 */
+	public String getValue()
+	{
+		return Value;
+	}
+
+
+
+
+
+	/**
+	 * @param value the value to set
+	 */
+	public void setValue(String value)
+	{
+		Value = value;
+	}
+
+
+
+
+
+
+	
+	
+}

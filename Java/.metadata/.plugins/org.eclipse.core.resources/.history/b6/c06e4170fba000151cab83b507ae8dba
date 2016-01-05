@@ -1,0 +1,83 @@
+package LoO;
+
+import java.util.ArrayList;
+
+public class Maps
+{
+	private String Name;
+	private int width;
+	private int height;
+	
+	private String Discription;
+	ArrayList<String> item = new ArrayList<String>();
+	ArrayList<Maps> map = new ArrayList<Maps>();
+
+	public Maps(int width, int height)
+	{
+		this.width = width;
+		this.height = height;
+	}
+
+public void mapBuild(int WIDTH,  int HEIGHT) {
+
+	// Initialize rooms
+    for (int i = 0; i < WIDTH; i++) 
+    {
+        for (int j = 0; j < HEIGHT; j++)
+        {
+            map[i][j] = System.out.print("*" );
+        }
+    }
+}
+	/**
+	 * @return the name
+	 */
+	public String getName()
+	{
+		return Name;
+	}
+
+	/**
+	 * @return the discription
+	 */
+	public String getDiscription()
+	{
+		return Discription;
+	}
+
+	/**
+	 * @return the item
+	 */
+	public ArrayList<String> getItem()
+	{
+		return item;
+	}
+
+	/**
+	 * @param name
+	 *            the name to set
+	 */
+	public void setName(String name)
+	{
+		Name = name;
+	}
+
+	/**
+	 * @param discription
+	 *            the discription to set
+	 */
+	public void setDiscription(String discription)
+	{
+		Discription = discription;
+	}
+
+	/**
+	 * @param item
+	 *            the item to set
+	 */
+	public void setItem(ArrayList<String> item)
+	{
+		this.item = item;
+	}
+
+}

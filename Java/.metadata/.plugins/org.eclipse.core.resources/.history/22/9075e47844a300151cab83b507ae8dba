@@ -1,0 +1,173 @@
+package examples;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ReadPresidents
+{
+
+	public static ArrayList<Presidents> PresidentList = new ArrayList<Presidents>();
+	public static ArrayList<Presidents> PresidentList2 = new ArrayList<Presidents>();
+	public static int userChoice;
+
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+
+		BufferedReader bufIn = null;
+		try
+		{
+			bufIn = new BufferedReader(new FileReader("presidents.csv"));
+
+			String line;
+			while ((line = bufIn.readLine()) != null)
+			{
+				String[] parts = line.split(",");
+
+				String startYear = parts[4].substring(0, 5);
+				String endYear = parts[4].substring(6);
+				Presidents george = new Presidents(parts[0], startYear, endYear, parts[1], parts[2], parts[3],
+						parts[5]);
+
+				PresidentList.add(george);
+			}
+			
+			BufferedReader bufIn2 = null;
+			
+				bufIn2 = new BufferedReader(new FileReader("presidents.txt"));
+
+				String line2;
+				while ((line2 = bufIn.readLine()) != null)
+				{
+					String[] parts = line.split(",");
+
+					String startYear = parts[4].substring(0, 5);
+					String endYear = parts[4].substring(6);
+					Presidents george = new Presidents(parts[0], startYear, endYear, parts[1], parts[2], parts[3],
+							parts[5]);
+
+					PresidentList2.add(george);
+				}
+
+			while (true)
+			{
+				PrintMenu(keyboard);
+
+				if (userChoice == 1)
+				{
+					prinAll();
+				} else if (userChoice == 2)
+				{
+					PrintWhig();
+				} else if (userChoice == 3)
+				{
+					PresidentWithMiddleName();
+				} else if (userChoice == 4)
+				{
+					PresidentLastNameStartingwith();
+				} else if (userChoice == 5)
+				{
+					for (int i = 0; i < PresidentList2.size(); i++)
+					{
+
+						PresidentList2.get(i).display();
+					}
+				} else if (userChoice == 6)
+				{
+					break;
+				}
+
+			}
+
+		} catch (IOException e)
+		{
+			System.err.println(e);
+		} finally
+		{
+			if (bufIn != null)
+			{
+				try
+				{
+					bufIn.close();
+				} catch (IOException e)
+				{
+					System.err.println(e);
+				}
+			}
+		}
+	}
+
+	public static void PrintMenu(Scanner keyboard)
+	{
+		System.out.println("\t \t 1) Print all presidends\t \t");
+		System.out.println(" ");
+		System.out.println("\t \t 2 )Print president from a party  \t \t  ");
+		System.out.println(" ");
+		System.out.println("\t \t 3) Print president with middle name \t \t ");
+		System.out.println(" ");
+		System.out.println("\t \t 4) Print president starting with a certain character \t \t ");
+		System.out.println(" ");
+		System.out.println("\t \t 5) President 2 List \t \t ");
+		System.out.println(" ");
+		System.out.println("\t \t 6) Quit Menu  \t \t ");
+		userChoice = keyboard.nextInt();
+	}
+
+	public static void prinAll()
+	{
+		for (int i = 0; i < PresidentList.size(); i++)
+		{
+
+			PresidentList.get(i).display();
+		}
+	}
+
+	public static void PrintWhig()
+	{
+		for (int i = 0; i < PresidentList.size(); i++)
+		{
+
+			String party = PresidentList.get(i).getParty();
+
+			if (party.contains("Whig"))
+			{
+				PresidentList.get(i).display();
+			}
+
+		}
+	}
+
+	public static void PresidentWithMiddleName()
+	{
+		for (int i = 0; i < PresidentList.size(); i++)
+		{
+			if (((PresidentList.get(i).getMiddleName().length()) > 1))
+			{
+
+				System.out.println(PresidentList.get(i).getMiddleName());
+			}
+
+		}
+
+	}
+
+	public static void PresidentLastNameStartingwith()
+	{
+		for (int i = 0; i < PresidentList.size(); i++)
+		{
+			String nameStartwithR = PresidentList.get(i).getLastName().substring(1, 2);
+			// System.out.println(nameStartwithR);
+			if (nameStartwithR.equalsIgnoreCase("R"))
+			{
+
+				System.out.println(PresidentList.get(i));
+			}
+
+		}
+
+	}
+
+}

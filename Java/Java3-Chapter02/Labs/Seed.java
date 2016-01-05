@@ -1,0 +1,103 @@
+package Labs;
+
+public class Seed
+{
+	private String name;
+	private int value;
+	private int seed;
+	private int wins;
+	/**
+	 * @return the name
+	 */
+	public Seed(String name, int value, int seed, int wins)
+	{
+		super();
+		this.name = name;
+		this.value = value;
+		this.seed = seed;
+		this.wins = wins;
+	}
+	
+	
+	
+	public String getName()
+	{
+		return name;
+	}
+	/**
+	 * @return the value
+	 */
+	public int getValue()
+	{
+		return value;
+	}
+	/**
+	 * @return the seed
+	 */
+	public int getSeed()
+	{
+		return seed;
+	}
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	/**
+	 * @param value the value to set
+	 */
+	public void setValue(int value)
+	{
+		this.value = value;
+	}
+	/**
+	 * @param seed the seed to set
+	 */
+	public void setSeed(int seed)
+	{
+		this.seed = seed;
+	}
+	public void numOfWinds(int seed)
+	{
+		this.seed += seed;
+	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString()
+	{
+		return "Seed [name=" + name + ", value=" + value + ", seed=" + seed + "]";
+	}
+
+
+
+	/**
+	 * @return the wins
+	 */
+	public int getWins()
+	{
+		return wins;
+	}
+
+
+
+	/**
+	 * @param wins the wins to set
+	 */
+	public void setWins(int wins)
+	{
+		this.wins += wins;
+	}
+
+	public void setWins2(int wins)
+	{
+		this.wins = 1;
+	}
+	
+	
+	
+
+}

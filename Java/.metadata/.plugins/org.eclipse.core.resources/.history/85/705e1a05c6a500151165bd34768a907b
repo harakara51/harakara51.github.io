@@ -1,0 +1,8 @@
+package Labs;
+
+public class Seed
+{
+	private String name;
+	private int value;
+
+}

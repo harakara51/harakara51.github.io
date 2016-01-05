@@ -1,0 +1,78 @@
+package LoO;
+
+import java.util.Scanner;
+
+public class BattleSequence
+{
+    
+	
+	public void Battle( NPC player, NPC monster, GameMenu gm)
+    {
+	
+		
+        Scanner keyboard = new Scanner(System.in);
+        while(true)
+        {
+            
+        	
+        	gm.printGameMenu();
+            //int monsterChoice = (int) (Math.random() * 10);
+            UserCommand userChoice = UserCommand.valueOf(keyboard.next().toUpperCase());
+            if(userChoice == UserCommand.ATTACK)
+            {
+                player.startAttack();
+            }
+//            else if (userChoice == UserCommand.DEFEND)
+//            {
+//                player.defend();
+//            }
+//            else
+//            {
+//                player.heal();
+//            }
+            
+            gm.printGameMenu();
+            
+            
+            monster1.isAlive();
+            if (monster1.isAlive() == false)
+            {
+                System.out.println("You won the battle!");
+                break;
+            }
+            
+            monster1.startAttack();
+            
+            
+            if (player.isAlive() == false)
+            {
+                System.out.println("You lose!");
+                break;
+            }
+            
+            
+//            if(monsterChoice )
+//            {
+//                
+//            }
+//            else if()
+//            {
+//                
+//            }
+//            else
+//            {
+//                
+//            }
+        }
+        keyboard.close();
+    }
+
+    public void battleMenuChoice()
+    {
+        System.out.println("Please choose an action:(type the word) ");
+        System.out.println("1: Attack");
+        System.out.println("2: Defend");
+        System.out.println("3: Heal");
+
+    }
+}

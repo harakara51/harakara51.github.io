@@ -1,0 +1,6 @@
+package examples;
+
+public enum Color
+{
+	Green, Pink, White, Yellow, Brown;
+}

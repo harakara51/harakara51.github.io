@@ -1,0 +1,40 @@
+package examples;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Search
+{
+	 public static void main(String[] args) {
+	        BufferedReader bufIn = null;
+	        try {
+	            bufIn = new BufferedReader(new FileReader("employee.txt"));
+
+	            String line;
+	            while ((line = bufIn.readLine()) != null) 
+	            {
+	            	if (line.contentEquals("manager"))
+	                System.out.println(line);
+	            	//System.out.println(line);
+	            }
+
+	        }
+	        catch (IOException e) {
+	            System.err.println(e);
+	        }
+	        finally {
+	            if (bufIn != null) {
+	                try {
+	                    bufIn.close();
+	                }
+	                catch (IOException e) {
+	                    System.err.println(e);
+	                }
+	            }
+	        }
+	    }
+	}
+
+
+

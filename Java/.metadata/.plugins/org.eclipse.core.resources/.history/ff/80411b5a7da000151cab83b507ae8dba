@@ -1,0 +1,140 @@
+package LoO;
+
+public class NPC
+{
+	private String Name;
+	private int HP;
+	private int MP;
+	private int Attack;
+	private int Defense;
+	
+//constructor	
+	public NPC(String name, int hP, int mP, int attack, int defense)
+	{
+		Name = name;
+		HP = hP;
+		MP = mP;
+		Attack = attack;
+		Defense = defense;
+	}
+
+	boolean isAlive ()
+	{
+		
+		
+		return true;
+	}
+	public  int movePlayer ()
+	{
+		return 1;
+	}
+	
+	public void startAttack (NPC npc)
+	{
+		npc.setHP(npc);
+	}
+	
+	public int defend ()
+	{
+		return 1;
+	}
+	
+	public int heal ()
+	{
+		return 1;
+	}
+
+
+	/**
+	 * @return the name
+	 */
+	public String getName()
+	{
+		return Name;
+	}
+
+
+	/**
+	 * @return the hP
+	 */
+	public int getHP()
+	{
+		return HP;
+	}
+
+	/**
+	 * @return the mP
+	 */
+	public int getMP()
+	{
+		return MP;
+	}
+
+	/**
+	 * @return the attack
+	 */
+	public int getAttack()
+	{
+		return Attack;
+	}
+
+	/**
+	 * @return the defense
+	 */
+	public int getDefense()
+	{
+		return Defense;
+	}
+
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name)
+	{
+		Name = name;
+	}
+
+
+	/**
+	 * @param hP the hP to set
+	 */
+	public void setHP(NPC npc)
+	{
+		npc.HP -= this.getAttack();
+	}
+
+
+	/**
+	 * @param mP the mP to set
+	 */
+	public void setMP(int mP)
+	{
+		MP = mP;
+	}
+
+
+	/**
+	 * @param attack the attack to set
+	 */
+	public void setAttack(int attack)
+	{
+		Attack = attack;
+	}
+
+
+	/**
+	 * @param defense the defense to set
+	 */
+	public void setDefense(int defense)
+	{
+		Defense = defense;
+	}
+	
+	
+		
+	
+	
+	
+	
+}

@@ -1,0 +1,22 @@
+package examples;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
+
+public class Deck implements Comparable<Deck>{
+    public static void main(String[] args) {
+        List<Card> deck = new ArrayList<>(new DeckComparator(52));
+
+        for (Suit s : Suit.values()) {
+            for (Rank r : Rank.values()) {
+                deck.add(new Card(r, s));
+            }
+        }
+ //       deck.sort(DeckComparator);
+        for (Card card : deck) {
+            System.out.println(card);
+            
+        }
+    }
+}

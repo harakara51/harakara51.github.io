@@ -1,0 +1,98 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class BlackJack
+{
+	public static List<Cards>hand = new ArrayList<Cards>();  
+	public static List<Cards>AIhand = new ArrayList<Cards>(); 
+	public static int userChoice;
+	public static int userScore;
+	public static int userTurn;
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner (System.in);
+		player(keyboard);
+		AI();
+		printHand();
+	}
+	
+	
+	public static void AI()
+	{
+		Cards hand1 =new Cards();
+		Cards hand2 =new Cards();
+		AIhand.add(hand1);
+		AIhand.add(hand2);
+		
+	}
+	
+	public static void player(Scanner keyboard)
+	{
+	
+	Cards hand1 =new Cards();
+	Cards hand2 =new Cards();
+	hand.add(hand1);
+	hand.add(hand2);
+	
+	while (userScore <21)
+	{	
+	System.out.println("Press 1 to hit or press 2 to Stand");
+	userChoice=keyboard.nextInt();
+	
+	}
+	
+	}
+	
+	
+	public static void PlayersTurn(Scanner keyboard)
+	{
+		
+		System.out.println("Press 1 to hit or press 2 to Stand");
+		userChoice=keyboard.nextInt();
+		
+		if (userChoice==1)
+		{
+		Cards hand3 =new Cards();
+		hand.add(hand3);
+		}
+		else
+			userTurn = 1;
+		
+		for (Cards cards : hand)
+		{
+			userScore += cards.getNumber();
+		}
+		
+		System.out.println("your Current score is : " + userScore);
+		if(userChoice>21)
+		{
+			System.out.println("You lose");
+			System.exit(0);
+		}
+	}
+	
+	
+	public static void AITurn ()
+	{
+		int aiScore =0;
+		for (Cards cards : AIhand)
+		{
+			aiScore += cards.getNumber();
+		}
+		
+		while(aiScore <17)
+		{
+			Cards hand3 =new Cards();
+			AIhand.add(hand3);
+		}
+	}
+
+	public static void printHand()
+	{
+
+		System.out.print(hand.get(0));
+		System.out.println(hand.get(1));
+	}
+	
+}

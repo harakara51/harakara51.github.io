@@ -1,0 +1,14 @@
+import javax.swing.JFrame;
+
+public class GameWindow extends JFrame
+{
+	
+	public void setWindow()
+	{
+		setTitle("Blackjack");
+		setSize(500, 500);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	
+}

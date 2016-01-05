@@ -1,0 +1,97 @@
+package examples;
+
+public class Log implements Comparable<Log>
+{
+	private String Address;
+	private String Stuff;
+	private String visits;
+	
+	
+	public Log(String address, String visits)
+	{
+
+		Address = address;
+	
+		this.visits = visits;
+	}
+
+	
+
+	/**
+	 * @return the address
+	 */
+	public String getAddress()
+	{
+		return Address;
+	}
+
+
+	/**
+	 * @return the stuff
+	 */
+	public String getStuff()
+	{
+		return Stuff;
+	}
+
+
+	/**
+	 * @return the visits
+	 */
+	public String getVisits()
+	{
+		return visits;
+	}
+
+
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(String address)
+	{
+		Address = address;
+	}
+
+
+	/**
+	 * @param stuff the stuff to set
+	 */
+	public void setStuff(String stuff)
+	{
+		Stuff = stuff;
+	}
+
+
+	/**
+	 * @param visits the visits to set
+	 */
+	public void setVisits(String visits)
+	{
+		this.visits = visits;
+	}
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString()
+	{
+		return "LogEntry [Address=" + Address + ", Stuff=" + Stuff + ", visits=" + visits + "]";
+	}
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Comparable#compareTo(java.lang.Object)
+	 */
+	@Override
+	public int compareTo(Log o)
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+	
+	
+}

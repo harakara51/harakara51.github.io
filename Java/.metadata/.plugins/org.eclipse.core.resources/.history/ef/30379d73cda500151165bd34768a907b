@@ -1,0 +1,65 @@
+package Labs;
+
+import java.util.ArrayList;
+
+public class NBADraftPicker
+
+{
+	public static ArrayList<Seed> NBAPicks = new ArrayList<Seed>();
+
+	public static void main(String[] args)
+	{
+		draftSet();
+		System.out.println(NBAPicks.size());
+	}
+
+	public static void draftSet ()
+	{
+		int counter = 0;
+		Seed one = new Seed ("Sixers",250,1);
+		Seed two = new Seed ("Lakers",199,2);
+		Seed three = new Seed ("Nets",156,3);
+		Seed four = new Seed ("Pelican",119,4);
+		Seed five = new Seed ("TimberWolves",88,5);
+		Seed six= new Seed ("Bucks",63,6);
+		Seed seven = new Seed ("Kings",43,7);
+		Seed eight = new Seed ("Sun",28,8);
+		Seed nine = new Seed ("Blazers",17,9);
+		Seed ten = new Seed ("Jazz",10,10);
+		Seed eleven = new Seed ("Wizards",8,11);
+		Seed twelve= new Seed ("Knicks",7,12);
+		Seed thirteen = new Seed ("Celtics",6,13);
+		Seed fourteen= new Seed ("Hawks",5,14);
+		String [] seeds =  {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"};
+		
+		
+		
+		NBAPicks.add(one);
+		NBAPicks.add(two);
+		NBAPicks.add(three);
+		NBAPicks.add(four);	
+		NBAPicks.add(five);
+		NBAPicks.add(six);
+		NBAPicks.add(seven);
+		NBAPicks.add(eight);
+		NBAPicks.add(nine);
+		NBAPicks.add(ten);
+		NBAPicks.add(eleven);
+		NBAPicks.add(twelve);
+		NBAPicks.add(thirteen);
+		NBAPicks.add(fourteen);
+		
+		for (int i = 0; i < NBAPicks.size(); i++)
+		{	
+		
+		
+			while (counter < (NBAPicks.get(i).getValue()-1))
+			{
+				NBAPicks.add(NBAPicks.get(i));
+				counter++;
+			}
+		
+		}
+		
+	}
+}

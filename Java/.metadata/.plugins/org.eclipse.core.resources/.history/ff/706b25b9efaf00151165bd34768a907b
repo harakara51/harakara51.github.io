@@ -1,0 +1,23 @@
+import javax.swing.JApplet;
+
+public class BJtester extends JApplet
+{
+
+	public static void main (String[] args)
+	{
+		
+		Deckbuilder deck1= new Deckbuilder();
+		
+		App canvas = new App ();
+		
+		for (CardsGUI card :deck1.getDeck())
+		{
+			System.out.println(card);
+		}
+			
+			
+	}
+	
+	
+
+}

@@ -1,0 +1,14 @@
+package LoO;
+
+public class GameMenu
+{
+    public void printGameMenu()
+    {
+   
+       map1.drawMap();
+        System.out.printf("Player Health: %1$d              Monster Health: %2$d", player.getHp(), monster.getHp());
+        System.out.println("");
+        
+        
+    }
+}

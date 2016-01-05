@@ -1,0 +1,17 @@
+package Labs;
+
+import java.util.ArrayList;
+
+public class NBADraftPicker
+{
+
+	public static void main(String[] args)
+	{
+		
+	}
+	
+	public static void draftSet ()
+	{
+		ArrayList<Seed> NBAPicks = new ArrayList<Seed>();
+	}
+}

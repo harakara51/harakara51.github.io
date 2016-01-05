@@ -1,0 +1,7 @@
+
+public class Cards
+{
+private int number;
+private Static suit;
+
+}

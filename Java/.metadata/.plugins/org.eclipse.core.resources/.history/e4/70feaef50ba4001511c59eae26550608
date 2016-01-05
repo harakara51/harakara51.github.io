@@ -1,0 +1,56 @@
+package examples;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class PigLatin
+{
+	public static String word;
+
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Please enter a word");
+		word = keyboard.nextLine();
+		// word ="oround";
+		String wordphase [] = word.split(" ");	
+		String re = "a|e|i|O|U|A|E|I|O|U";
+	//	m.reset(word);
+		Pattern p = Pattern.compile(re);
+		Matcher m = p.matcher(word);
+
+
+		String re2 = "^[aeio]";
+
+		Pattern p2 = Pattern.compile(re2);
+		Matcher m2 = p2.matcher(word);
+	
+
+		
+			m.reset(word);
+			m2.reset(word);
+		for (int i =0; i <wordphase.length; i++)
+		{
+			m.reset(wordphase[i]);
+			m2.reset(wordphase[i]);
+			
+			if (m2.find())
+			{
+				System.out.println(" " + word + "way");
+			} 
+		
+			else if (m.find())
+			{
+				//System.out.println("test");
+				
+				String pig = (word.substring(m.start()) + word.substring(0, m.start()) + "ay");
+			 System.out.println(pig);	
+			}			
+		}		
+
+		
+		
+	}//main class
+
+}//class 

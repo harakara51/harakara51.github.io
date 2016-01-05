@@ -1,0 +1,112 @@
+package examples;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class AreaCodeLister
+{
+	private Map<String, String> areaCodes = new HashMap<>();
+	private Map<String, String> abbreviations;
+
+	public AreaCodeLister()
+	{
+		populateAreaCodes();
+		populateAbbreviations();
+		print();
+	}
+
+	private void populateAbbreviations()
+	{
+		abbreviations = new HashMap<>();
+
+		try (BufferedReader in = new BufferedReader(new FileReader("abbreviations.txt")))
+		{
+
+			String line = null;
+			while ((line = in.readLine()) != null)
+			{
+
+				String ab = line.replace("\t", " ");
+				String[] states = ab.split(" ");
+				// System.out.println(ab);
+				abbreviations.put(states[1], states[0]);
+
+				// System.out.println(line);
+				// Add code to parse out the state and abbreviation
+				// from each line. Then add them to the abbreviations
+				// Map.
+			}
+		} catch (IOException e)
+		{
+			System.err.println(e);
+			System.exit(1);
+		}
+	}
+	private void populateAreaCodes()
+	{
+		areaCodes = new HashMap<>();
+
+		try (BufferedReader in = new BufferedReader(new FileReader("areacodes.txt")))
+		{
+
+			String line = null;
+			while ((line = in.readLine()) != null)
+			{
+				// System.out.println(line);
+				String split1 = line.trim().substring(0, 3);
+				String split2 = line.trim().substring(4);
+
+				// System.out.println(split1 + split2);
+
+				areaCodes.put(split1, split2);
+
+			}
+		} catch (IOException e)
+		{
+			System.err.println(e);
+			System.exit(1);
+		}
+	}
+
+	private void print() {
+        
+//    	for (String name: abbreviations.keySet())
+//    	
+//    	 {
+//    		 String key =name.toString();
+//            String value = abbreviations.get(name); 
+//            System.out.println(key + " " + value);  
+//            
+//    	 	}
+    	
+    	for (String name: areaCodes.keySet())
+        	
+   	 {
+   		 String key =name.toString();
+           String value = areaCodes.get(name); 
+           System.out.println(key + " " + value + " " + abbreviations.get(value));  
+           
+//       	for (String name: abbreviations.keySet())
+//       	
+//       	 {
+//       		 String key =name.toString();
+//               String value = abbreviations.get(name); 
+//               System.out.println(key + " " + value);  
+//               
+//       	 	}
+           
+   	 	}
+    	
+ //   	areaCodes.get(i);
+    }
+
+	public static void main(String[] args)
+	{
+		new AreaCodeLister();
+	}
+}

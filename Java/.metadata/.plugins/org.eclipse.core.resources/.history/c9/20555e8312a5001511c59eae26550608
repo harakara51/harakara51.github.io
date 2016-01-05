@@ -1,0 +1,90 @@
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class ReadFileToTwitter
+
+{
+	public static int lineCount;
+	public static String lineStore;
+	public static ArrayList<String> lineStore2 = new ArrayList<String>();
+	public static ArrayList<String> tweetholder = new ArrayList<String>();
+	public static StringBuilder tweet = new StringBuilder();
+	public static StringBuilder fulltext = new StringBuilder();
+	public static String[] lineStore3;
+	public static char[] charStore;
+	public static int wordCount;
+	public static int charCount;
+	public static int counter;
+
+	public static void main(String[] args)
+	{
+		readFile();
+		toTweetSize();
+		printTweet();
+	}
+	public static void readFile()
+	{
+		try
+		{
+			FileReader fr = new FileReader("dec.txt");
+			BufferedReader buf = new BufferedReader(fr);
+
+			String line;
+			while ((line = buf.readLine()) != null)
+			{
+				// System.out.println(line);
+				fulltext.append(line);
+			}
+
+			buf.close();
+
+		} catch (IOException e)
+
+		{
+			System.err.println(e.getMessage());
+		}
+	}
+	public static void toTweetSize()
+	{
+		lineStore3 = fulltext.toString().split(" ");
+
+		while (counter < lineStore3.length)
+		{
+
+			for (int i =0; i <(lineStore3.length-3); i ++)
+			{
+				tweet.append(lineStore3[counter] + " ");
+				counter++;
+				if (counter > (lineStore3.length-2))
+				{
+					//System.out.println("counter: " + counter + "linestore" +  lineStore3.length);
+					break;
+				}
+				if (tweet.length() > 135)
+				{
+					tweetholder.add(tweet.toString());
+					tweet.setLength(0);
+					break;
+				}
+
+			}
+		}
+	
+	}
+	public static void printTweet()
+	{
+		for (String string : tweetholder)
+		{  int num =0;
+			
+			System.out.println(" ");
+			System.out.println(string);
+			System.out.println(" ");
+			System.out.println("Tweet " + num + " of " + counter + " Length of tweet " + string.length());
+			
+		}
+
+	}
+}

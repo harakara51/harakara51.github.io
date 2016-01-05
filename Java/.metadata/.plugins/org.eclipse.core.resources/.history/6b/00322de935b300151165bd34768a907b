@@ -1,0 +1,62 @@
+package Bingo;
+
+import java.util.Scanner;
+
+public class BingoTester
+{
+	public static BingoSeed test = new BingoSeed();
+	public static String [][] board = new String [5][5];
+	private static int gameStatus;
+	private static int userInput;
+	public static int random;
+	public static void main(String[] args)
+	{
+		while(gameStatus !=5)
+		{
+		Scanner keyboard = new Scanner(System.in);
+		
+			if (userInput ==0)
+				{
+				gameboard();
+				System.out.println("Press 1 to print out the next Bingo Value?");
+				userInput =  keyboard.nextInt();
+				
+				}
+			else if (userInput ==1)
+			{
+				newBingoValues();
+				userInput =0;
+			}
+		
+		
+		}
+	}
+	
+	public static void newBingoValues ()
+	{
+		System.out.println("New Bingo Alphabet is : "+ test.getAlphabet());
+		System.out.println("New Bingo Number is : "+ test.getValue(random));
+
+	}
+	
+	public static void gameboard ()
+	{
+		
+		System.out.println( " B\t I\t N \t G\t O");
+		String number = "";
+		int multiplier=15;
+		for (int i =0; i < (board.length); i++)
+		{
+		random = (int)(Math.random() *((i+1)*multiplier) -(multiplier*i)); 
+			for (int j =0; j < (board.length); j++)
+			{
+				test.setAlphabet();
+				
+				board[i][j] = test.getAlphabet() + String.valueOf(test.getValue(random));
+				System.out.print(board[i][j] + " \t");
+			}
+			System.out.println();
+		}
+		
+	}
+}

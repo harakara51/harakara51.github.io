@@ -1,0 +1,142 @@
+package LoO;
+
+import java.sql.DatabaseMetaData;
+import java.util.Scanner;
+
+public class LoO
+{
+
+	public static int userChoice;
+	public static String movement;
+
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+
+		gameMenu(keyboard);
+
+		startGame(keyboard);
+
+		keyboard.close();
+	}
+
+	// this methods create initial methods for the game
+	public static void startGame(Scanner keyboard)
+	{
+		System.out.println(" ");
+
+		if (userChoice == 1)
+		{
+
+			printMap map1 = new printMap();
+
+			String name;
+
+			System.out.println("Please enter the name of the character");
+			name = keyboard.next();
+
+			map1.drawMap();
+
+			NPC player = new NPC(name, 100, 75, 8, 1);
+
+			NPC monster1 = new NPC("Monster", 100, 50, 50, 1);
+
+			Maps startingZone = new Maps(3, 3, 0, 0);
+			startingZone.mapBuild();
+			while (true)
+			{
+				System.out.println("Press W,A,S D to move: ");
+				movement = keyboard.next();
+				charMover(keyboard, startingZone);
+				startingZone.mapBuild();
+				System.out.println(" X is : " + startingZone.getX() + " Y is : " + startingZone.getY());
+			}
+
+//			BattleSequence bs = new BattleSequence();
+
+	//		GameMenu gm = new GameMenu();
+			// gm(player, monster1, gm);
+
+		//	bs.Battle(player, monster1, gm, map1);
+
+		}
+
+	}
+
+	// this method brings ups the game Menu
+	public static void gameMenu(Scanner keyboard)
+	{
+		System.out.println("\t \t 1) Start game \t \t");
+		System.out.println(" ");
+		System.out.println("\t \t 2 )Customize game  \t \t  ");
+		System.out.println(" ");
+		System.out.println("\t \t 3) Quit game  \t \t ");
+		userChoice = keyboard.nextInt();
+	}
+
+	public static void charMover(Scanner keyboard, Maps map)
+	{
+		if (movement.equalsIgnoreCase("D"))
+		{
+			if (((map.getY() - 1) < 0) || ((map.getY() - 1) >2))
+			{
+				System.out.println("You cannot move there");
+				System.out.println(map.getX() + "X inside exception " + map.getY() + " Y is greater than 2 or less than 0" );
+			}	
+			else 
+			{
+				map.setY(1);
+			}
+		} 
+		
+		else if (movement.equalsIgnoreCase("A"))
+		{
+			if (((map.getY() - 1) < 0) || ((map.getY() - 1) > 2))
+			{
+				System.out.println("You cannot move there");
+				System.out.println(map.getX() + "X inside exception " + map.getY() + " Y is less than 0  or greatar than 2" );
+			}
+		
+			else 
+			{
+				map.setY(-1);
+				
+			}
+		}
+		
+		else if (movement.equalsIgnoreCase("W"))
+		{
+			if (((map.getX() - 1) <0) || ((map.getX() - 1) >2))
+			{
+				System.out.println("You cannot move there");
+				System.out.println(map.getX() + "X inside exception " + map.getY() + " Y inside exception is less than 0" );
+			}
+
+			else 
+			{
+				map.setX(-1);
+			}
+		} 
+		
+		else if (movement.equalsIgnoreCase("S"))
+		{
+			if (((map.getX() - 1) < 0) || ((map.getX() - 1) >2))
+			{
+				System.out.println("You cannot move there");
+				System.out.println(map.getX() + "X inside exception " + map.getY() + " X inside exception, it is greatan than 2" );
+			}
+
+
+			else 
+			{
+				map.setX(1);
+				
+			}
+		}
+
+		System.out.println(map.getX() + " X inside exception " + map.getY() + " Y in method outside if statement" );
+	}
+
+	// end of method to draw board
+
+}

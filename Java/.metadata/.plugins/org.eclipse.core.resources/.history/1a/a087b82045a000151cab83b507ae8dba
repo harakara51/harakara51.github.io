@@ -1,0 +1,64 @@
+package examples;
+
+
+	import java.awt.*;
+	import javax.swing.*;
+
+	public class Paint extends JPanel
+	{
+		
+		
+		@Override
+		protected void paintComponent(Graphics g) {
+			g.setColor(new java.awt.Color(255, 0, 0));
+			g.drawOval(10, 50, 200, 200);
+			g.setColor(new java.awt.Color(0, 255, 0));
+			g.drawRect(20, 20, 50, 50);
+			g.setColor(new java.awt.Color(0, 0, 255));
+			g.drawString("Hello World", 30, 30);
+		}
+		
+		public static void main(String[] args) {
+			
+			
+			
+			Shape [] test1  = new Shape [3];
+			
+			Rectangle R1 = new Rectangle(5,5,Color.GREEN,15,10);
+			
+			Rectangle R2 = new Rectangle(15,30);
+			
+			Text t1 = new Text("Hello");
+			
+			Circle C1 = new Circle(5,5,Color.PINK,5);
+			
+
+			test1[0] = R1;
+			test1[1] = R2;
+			test1[2] = C1;
+			
+			Drawable [] e = new Drawable[4];
+			e[0] = R1;
+			e[1] = R2;
+			e[2] = C1;
+			e[3] = t1;
+			
+			for(Drawable D: e)
+			{
+				//System.out.println("  " + D);
+				D.drawable();
+			}
+			
+			
+			
+			JFrame f = new JFrame();
+			Paint panel = new Paint();
+			f.add(panel, BorderLayout.CENTER);
+			f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+			f.setSize(300,300);
+			f.setVisible(true);
+		}
+	}
+	
+	
+

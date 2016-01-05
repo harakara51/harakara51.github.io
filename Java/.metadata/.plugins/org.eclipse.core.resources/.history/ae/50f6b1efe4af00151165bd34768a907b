@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+
+public class BJtester
+{
+
+	public static void main(String[] args)
+	{
+		
+		Deckbuilder deck1= new Deckbuilder();
+		
+		
+		for (CardsGUI card :deck1.getDeck())
+		{
+			System.out.println(card);
+		}
+			
+			
+	}
+
+}

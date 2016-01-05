@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class BlackJack
+{
+	public static List<Cards>hand = new ArrayList<Cards>();  
+	public static void main(String[] args)
+	{
+		Cards hand1 =new Cards();
+		hand.add(hand1);
+		printHand();
+	}
+	
+	
+	public static void AI()
+	{
+		
+	}
+	
+	public static void player()
+	{
+		
+	}
+	
+	
+	
+
+	public static void printHand()
+	{
+		System.out.println(hand.get(0));
+	}
+	
+}

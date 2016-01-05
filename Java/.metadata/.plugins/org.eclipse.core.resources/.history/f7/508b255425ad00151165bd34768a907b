@@ -1,0 +1,144 @@
+import java.applet.Applet;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
+public class App extends Applet implements ActionListener
+{
+	private int random;
+	private static ArrayList<CardsGUI> playerHand = new ArrayList<CardsGUI>();
+	private static ArrayList<CardsGUI> bankerHand = new ArrayList<CardsGUI>();
+	public static ArrayList<CardsGUI> Deck = new ArrayList<CardsGUI>();
+	//
+	private int clicked;
+
+	public void init()
+	{
+		setBackground(Color.GREEN);
+		setSize(600, 600);
+
+		Button button1 = new Button("HIT");
+		button1.setLocation(20, 45);
+		button1.addActionListener(this);
+		button1.setVisible(true);
+		button1.setSize(30, 75);
+		button1.addComponentListener(null);
+		
+		Button button2 = new Button("STAND");
+		button2.setLocation(20, 45);
+		button1.addActionListener(this);
+	//	button2.addActionListener(null);
+		button2.setVisible(true);
+		button2.setSize(30, 75);
+		// button1.setBounds(200, 450, 50, 50);
+
+		
+		add(button1);
+		add(button2);
+
+	}
+
+	public void paint(Graphics g)
+	{
+		
+		setDeck();
+		int x = 120;
+		
+		playerHand.add(drawCard());
+		Image card1 = Toolkit.getDefaultToolkit().getImage(playerHand.get(0).getPath());
+		g.drawImage(card1, 100, 400, 75, 125, this);
+		g.finalize();
+		
+		Image card2 = Toolkit.getDefaultToolkit().getImage(playerHand.get(1).getPath());
+		g.drawImage(card2, 120, 400, 75, 125, this);
+		g.finalize();
+			for (int i = 0; i < clicked; i++)
+			{
+				Image  img3 = Toolkit.getDefaultToolkit().getImage(playerHand.get(i+2).getPath());
+				x = x + 20;
+				g.drawImage(img3, x, 400, 75, 125, this);
+				g.finalize();
+			}
+		
+		bankerHand.add(drawCard());
+		//Collections.shuffle(bankerHand);
+		Image card3 = Toolkit.getDefaultToolkit().getImage("Images/_Back.png");
+		g.drawImage(card3, 100, 200, 75, 125, this);
+		g.finalize();
+		
+		Image card4 = Toolkit.getDefaultToolkit().getImage(bankerHand.get(2).getPath());
+		g.drawImage(card4, 120, 200, 75, 125, this);
+		g.finalize();
+		
+		
+		
+			
+	}
+
+
+
+	public void setDeck()
+
+	{
+
+		String[] suit =
+		{ "Hearts", "Diamonds", "Spades", "Clubs" };
+		int[] number =
+		{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+
+		for (int i = 0; i < suit.length - 1; i++)
+		{
+			for (int k = 0; k < number.length; k++)
+			{
+				int Value;
+
+				int Number = number[k];
+				String Suit = suit[i];
+				String Name = suit[i] + " " + String.valueOf(Number);
+				String Path = "Images/" + Name + ".png";
+				if (k < 10)
+				{
+					Value = number[k];
+				} else
+					Value = 10;
+
+				CardsGUI Card = new CardsGUI(Number, Suit, Name, Path, Value);
+				Deck.add(Card);
+			}
+		}
+	}
+
+	public CardsGUI drawCard()
+	{
+	//	Collections.shuffle(Deck);
+		Random rand = new Random();
+		
+		random = rand.nextInt((36-1)+1);
+		CardsGUI temp = Deck.get(random);
+
+		return temp;
+	}
+
+	public void actionPerformed(ActionEvent e)
+	{
+		Button source = (Button)e.getSource();
+		if(source.getLabel() == "button1"){
+			clicked++;
+	      }
+		//clicked++;
+		
+	
+		
+		
+		System.out.println(clicked + " " + random + " " + playerHand.get(clicked+1).getNumber() +  " " + playerHand.get(clicked+1).getPath());
+		repaint();
+ 
+	}
+}

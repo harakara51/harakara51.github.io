@@ -1,0 +1,33 @@
+package Labs;
+
+import java.util.ArrayList;
+
+public class NBADraftPicker
+
+{
+	public static ArrayList<Seed> NBAPicks = new ArrayList<Seed>();
+
+	public static void main(String[] args)
+	{
+		
+	}
+	
+	public static void draftSet ()
+	{
+		Seed one = new Seed ("Sixers",250,1);
+		Seed two = new Seed ("Lakers",199,1);
+		Seed three = new Seed ("Nets",156,1);
+		Seed four = new Seed ("Pelican",119,1);
+		Seed five = new Seed ("TimberWolves",250,1);
+		Seed six= new Seed ("Bucks",250,1);
+		Seed seven = new Seed ("Kings",250,1);
+		Seed eight = new Seed ("Sun",250,1);
+		Seed nine = new Seed ("Blazers",250,1);
+		Seed ten = new Seed ("Jazz",250,1);
+		Seed eleven = new Seed ("Wizards",250,1);
+		Seed twelve= new Seed ("Knicks",250,1);
+		Seed thirteen = new Seed ("Celtics",250,1);
+		Seed fourteen= new Seed ("Hawks",250,1);
+		
+	}
+}

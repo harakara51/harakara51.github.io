@@ -1,0 +1,35 @@
+package examples;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Acess_log
+{
+	public static List<String> Log = new ArrayList<String>();
+	public static void main(String[] args)
+	{
+		readFile();
+	}
+
+public static void readFile()
+{
+	try (BufferedReader in = new BufferedReader(new FileReader("access_log")))
+	{
+
+		String line = null;
+		while ((line = in.readLine()) != null)
+		{
+			String [] store = line.split(" ");
+			Log.add(store[0]);
+			System.out.println(line);
+		}
+	} catch (IOException e)
+	{
+		System.err.println(e);
+		System.exit(1);
+	}
+}
+}

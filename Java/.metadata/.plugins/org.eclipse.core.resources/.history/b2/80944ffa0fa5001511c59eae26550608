@@ -1,0 +1,40 @@
+package examples;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
+
+
+public class Deck
+{
+	public static void main(String[] args)
+	{
+		List<Card> deck = new ArrayList<>(52);
+
+		for (Suit s : Suit.values())
+		{
+			for (Rank r : Rank.values())
+			{
+				deck.add(new Card(r, s));
+			}
+		}
+		// deck.sort(DeckComparator);
+		
+		//Collections.shuffle(deck);
+		
+		for (Card card : deck)
+		{
+			System.out.println(card);
+
+		}
+		
+		Collections.shuffle(deck);
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Comparable#compareTo(java.lang.Object)
+	 */
+
+
+}

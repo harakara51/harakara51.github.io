@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class BlackJack
+{
+	public static List<Cards>hand = new ArrayList<Cards>();  
+	public static List<Cards>AIhand = new ArrayList<Cards>();  
+	public static void main(String[] args)
+	{
+		
+		printHand();
+	}
+	
+	
+	public static void AI()
+	{
+		Cards hand1 =new Cards();
+		Cards hand2 =new Cards();
+		AIhand.add(hand1);
+		AIhand.add(hand2);
+		
+	}
+	
+	public static void player()
+	{
+	
+	Cards hand1 =new Cards();
+	Cards hand2 =new Cards();
+	hand.add(hand1);
+	hand.add(hand2);
+	System.out.println(hand1.getNumber() + hand1.getSuit());	
+	}
+	
+	
+	
+
+	public static void printHand()
+	{
+		
+	}
+	
+}

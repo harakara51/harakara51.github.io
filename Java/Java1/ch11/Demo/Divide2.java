@@ -1,0 +1,36 @@
+package Demo;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Divide2
+{
+	public static Double getResults (double a, double c) throws DivideByZeroException
+
+	{
+		if (c==0)
+		{
+			throw new DivideByZeroException("Cannot divide by zero");
+		}
+		return a/c;
+	}
+	public static void main(String[] args) throws DivideByZeroException
+	{
+		Scanner keyboard = new Scanner(System.in);
+		int num1, num2 = 0;
+
+		System.out.println("Please enter the integer");
+		num1 = keyboard.nextInt();
+		System.out.println("Please enter the integer");
+		num2 = keyboard.nextInt();
+
+		double result = getResults(num1, num2);
+		System.out.println(result);
+		
+		System.out.print("End of program");
+	}
+	
+
+	//keyboard.close();
+
+}

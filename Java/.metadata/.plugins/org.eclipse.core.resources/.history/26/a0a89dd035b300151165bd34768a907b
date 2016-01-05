@@ -1,0 +1,115 @@
+package Bingo;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class BingoSeed
+{
+
+	private int Value;
+	private List<Integer> Values = new ArrayList<>();
+	private char alphabet;
+	private char [] alpha = {'B', 'I', 'N', 'G', 'O'};
+	private int wins;
+	/**
+	 * @return the name
+	 */
+	public BingoSeed()
+	{
+
+		setValues();
+		setAlphabet();
+	}
+	
+	public void setValue()
+	{
+	
+	
+
+	}
+	
+	public String getResult ()
+
+	
+	{
+		Collections.shuffle(Values);
+		return(Values.size() + " "+ Values.get(0));
+	}
+
+
+
+
+	/**
+	 * @param wins the wins to set
+	 */
+	public void setWins(int wins)
+	{
+		this.wins += wins;
+	}
+
+	public void setWins2(int wins)
+	{
+		this.wins = 1;
+	}
+
+	/**
+	 * @return the values
+	 */
+	public List<Integer> getValues()
+	{
+		return Values;
+	}
+
+	/**
+	 * @return the alphabet
+	 */
+	public char getAlphabet()
+	{
+		
+		
+		return alphabet;
+	}
+	public int getValue(int number)
+	{
+		Collections.shuffle(Values);
+		Value = Values.get(number);
+		Values.remove(number);
+		return Value;
+	}
+	
+	public void setTestSize()
+	{
+		Values.remove(0);
+	}
+
+	/**
+	 * @return the alpha
+	 */
+	public char[] getAlpha()
+	{
+		return alpha;
+	}
+
+	/**
+	 * @param values the values to set
+	 */
+	public void setValues()
+	{
+		for (int i  = 0; i <50; i ++)
+		{
+			Values.add(i);
+		}
+	}
+
+
+
+	public void setAlphabet ()
+	{
+		int random = (int)(Math.random()*5);
+		alphabet = alpha[random];
+	}
+	
+	
+
+}

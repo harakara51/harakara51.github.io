@@ -1,0 +1,10 @@
+package examples;
+
+public class ShapeTester
+{
+	public static void main(String[] args)
+	{
+		Shape [] test1  = new Shape [3];
+		
+	}
+}

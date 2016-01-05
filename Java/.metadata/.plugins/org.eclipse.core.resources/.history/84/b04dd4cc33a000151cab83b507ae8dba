@@ -1,0 +1,13 @@
+package examples;
+
+public class Circle extends Shape
+{
+
+	@Override
+	public void getArea()
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}

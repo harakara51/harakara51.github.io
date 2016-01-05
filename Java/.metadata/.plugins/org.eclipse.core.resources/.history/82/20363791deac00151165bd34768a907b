@@ -1,0 +1,14 @@
+import java.applet.Applet;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+public class App extends Applet
+{
+	public void paint (Graphics g)
+	{
+		Image img1 = Toolkit.getDefaultToolkit().getImage("Images/Clubs 1.png");
+		    g.drawImage(img1, 10, 10, this);
+		    g.finalize();
+	}
+}

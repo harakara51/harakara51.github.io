@@ -1,0 +1,11 @@
+package Bingo;
+
+public class BingoTester
+{
+	public static void main(String[] args)
+	{
+		BingoSeed test = new BingoSeed();
+		System.out.println("New Bingo Alphabet is : "+ test.getAlphabet());
+		System.out.println("New Bingo Alphabet is : "+ test.getAlphabet());
+	}
+}

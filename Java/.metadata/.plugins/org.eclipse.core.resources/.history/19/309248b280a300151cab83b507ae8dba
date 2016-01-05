@@ -1,0 +1,51 @@
+package examples;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class PigLatin
+{
+	public static String word;
+
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Please enter a word");
+		word = keyboard.nextLine();
+		// word ="oround";
+
+		String re = "^.";
+
+		Pattern p = Pattern.compile(re);
+		Matcher m = p.matcher(word);
+		String[] pig = p.split(word);
+
+		String re2 = "^a ";
+
+		Pattern p2 = Pattern.compile(re2);
+		Matcher m2 = p2.matcher(word);
+	
+
+		
+			m.reset(word);
+			m2.reset(word);
+		
+			if (m2.find())
+			{
+				System.out.println(" " + word + "way");
+			} 
+		
+			else if (m.find())
+			{
+			
+					System.out.println(pig[1] + m.group() + "ay");	
+
+			}			
+				
+
+		
+		
+	}//main class
+
+}//class 

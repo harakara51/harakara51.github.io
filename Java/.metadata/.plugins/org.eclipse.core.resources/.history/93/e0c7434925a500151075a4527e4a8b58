@@ -1,0 +1,13 @@
+package examples;
+
+import java.util.Comparator;
+
+public class LogComparator implements Comparator <Log>
+{
+	public static compare(Log a, Log b)
+	{
+	return (a.getVisits().compareTo(b.getVisits()));
+	
+	}
+
+}

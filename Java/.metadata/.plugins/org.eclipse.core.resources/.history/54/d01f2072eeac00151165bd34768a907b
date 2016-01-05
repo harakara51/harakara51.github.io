@@ -1,0 +1,48 @@
+import java.applet.Applet;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+public class App extends Applet
+{
+	private String Path;
+	private Image Card = null;
+	
+	App ()
+	{
+		this.Path = "Images/_Joker r.png";
+	}
+	
+	App (String path)
+	{
+		this.Path = path;
+	}
+	public void paint (Graphics g)
+	{
+	//	App club9 = new App("Clubs 9");
+		CardsGUI club9 = new CardsGUI(9, "Clubs" , "Clubs 9");
+	//	g.setColor();
+		//Image img1 = Toolkit.getDefaultToolkit().getImage("Images/_Joker r.png");
+			Card =getImage();
+		    g.drawImage(Card, 100, 100, 50, 75, this);
+		    g.finalize();
+	}
+	
+	
+	public Image getImage()
+	{
+		
+		Image tempImage =null;
+		try
+		{
+			tempImage = Toolkit.getDefaultToolkit().getImage(Path);	
+		}
+		catch (Exception e)
+		{
+			System.out.println("Could not load image" + e.getMessage());
+		}
+		
+		return tempImage;
+		
+	}
+}

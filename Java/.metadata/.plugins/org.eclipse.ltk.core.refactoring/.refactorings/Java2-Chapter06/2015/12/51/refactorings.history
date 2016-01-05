@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;examples.LogEntry&apos; to &apos;Log&apos;&#x0A;- Original project: &apos;Java2-Chapter06&apos;&#x0A;- Original element: &apos;examples.LogEntry&apos;&#x0A;- Renamed element: &apos;examples.Log&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LogEntry&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/&lt;examples{LogEntry.java[LogEntry" matchStrategy="1" name="Log" qualified="false" references="true" similarDeclarations="false" stamp="1450399973100" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,12 @@
+package Demo;
+
+public class DivideByZeroException extends Exception
+{
+
+	public DividByZeroException (String message)
+	
+		{
+			super(message);
+		}
+
+}

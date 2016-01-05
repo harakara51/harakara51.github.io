@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1449773723670_1" label="Java1" name="Java1">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java1-AppendixB" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/comparator" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java1-Chapter02" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java1-Chapter04" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java1-Chapter06" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java1-Chapter08" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java1-Chapter11" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java1-Chapter05" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java1-Chapter07" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java1-Chapter09" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java1-Chapter10" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1449773844812_2" label="Java2" name="Java2">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java2-Chapter02" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java2-Chapter04" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java2-Chapter06" type="4"/>
+<item elementID="=Java2-Chapter03" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java2-Chapter05" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java2-Chapter07" type="4"/>
+<item elementID="=Java3-Admin" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Java3-AppendixA" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Java3-AppendixB" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Java3-Chapter03" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Java3-Chapter04" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Java3-Chapter05" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Java3-Chapter06" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Java3-Chapter07" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Java3-Chapter08" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1449787099943_4" label="Labs" name="Labs">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Labs" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1450460771887_6" label="Java3" name="Java3">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java3-Chapter02" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1450461761668_9" label="JavaProjects" name="JavaProjects"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1450461772756_10" label="Java4" name="Java4"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1450463253003_11" label="java3" name="java3">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Java3-Chapter02/access_log" type="1"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1449587166385_0" label="Window Working Set" name="Aggregate for window 1449587166384"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1449773862085_3" label="Multiple Working Sets" name="Aggregate:Java1:Java2:">
+<workingSet IMemento.internal.id="Java1"/>
+<workingSet IMemento.internal.id="Java2"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1449787164867_5" label="Multiple Working Sets" name="Aggregate:Java1:Java2:Labs:">
+<workingSet IMemento.internal.id="Java1"/>
+<workingSet IMemento.internal.id="Java2"/>
+<workingSet IMemento.internal.id="Labs"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1450460801508_7" label="Multiple Working Sets" name="Aggregate:Java1:Java2:Java3:Labs:">
+<workingSet IMemento.internal.id="Java1"/>
+<workingSet IMemento.internal.id="Java2"/>
+<workingSet IMemento.internal.id="Java3"/>
+<workingSet IMemento.internal.id="Labs"/>
+</workingSet>
+<mruList name="Java3"/>
+<mruList name="Java2"/>
+</workingSetManager>

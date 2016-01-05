@@ -1,0 +1,101 @@
+package examples;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ConvertFilesInPigLatin
+{
+	public static int lineCount;
+	public static String lineStore;
+	public static StringBuilder builder = new StringBuilder();
+	public static StringBuilder lineStore2;
+	public static String[] lineStore3;
+	public static String[] lineStore4;
+	public static String input;
+
+	public static void main(String[] args)
+	{
+
+		readfile();
+
+	}
+
+	public static void readfile()
+	{
+		try
+		{
+			FileReader fr = new FileReader("dec.txt");
+			BufferedReader buf = new BufferedReader(fr);
+
+			String line;
+			while ((line = buf.readLine()) != null)
+			{
+
+				builder.append(line + "\n");
+				input = builder.toString();
+				// lineStore3 = input.split(" ");
+
+			}
+
+			buf.close();
+			convertToPig();
+
+		} catch (IOException e)
+		{
+			System.err.println(e.getMessage());
+		}
+
+	}
+
+	public static void convertToPig()
+	{
+		lineStore3 = input.split("\n");
+
+		String re = "a|e|i|O|U|A|E|I|O|U";
+		// m.reset(word);
+		Pattern p = Pattern.compile(re);
+		Matcher m = p.matcher(lineStore3[0]);
+
+		String re2 = "^[aeioAEIOU]";
+
+		Pattern p2 = Pattern.compile(re2);
+		Matcher m2 = p2.matcher(lineStore3[0]);
+
+		for (String string : lineStore3)
+		{
+			lineStore4 = string.split(" ");
+
+			for (int i = 0; i < lineStore4.length; i++)
+			{
+				m.reset(lineStore4[i]);
+				m2.reset(lineStore4[i]);
+				String test = lineStore4[i];
+
+				// if( lineStore3[i].contains("\n")
+				// {
+				// System.out.println(" test");
+				// }
+
+				if (m2.find())
+				{
+					//System.out.print(" test" + lineStore4[i]);
+					System.out.print(" " + test + "way" + "  ");
+				}
+
+				else if (m.find())
+				{
+					String pig = (test.substring(m.start()) + test.substring(0, m.start()) + "ay");
+					System.out.print(pig);
+				}
+				
+			}
+			System.out.println(" ");
+
+		}
+	}
+
+}

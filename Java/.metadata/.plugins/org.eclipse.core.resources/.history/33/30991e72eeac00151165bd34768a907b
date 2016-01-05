@@ -1,0 +1,11 @@
+import java.util.ArrayList;
+
+public class Deckbuilder
+{
+private CardsGUI Cards;
+private ArrayList<CardsGUI> Deck;
+
+
+
+
+}

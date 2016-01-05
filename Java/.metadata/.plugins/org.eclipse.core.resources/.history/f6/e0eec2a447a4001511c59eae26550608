@@ -1,0 +1,88 @@
+package examples;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+public class ConvertFilesInPigLatin
+{
+	public static int lineCount;
+	public static String lineStore;
+	StringBuilder builder = new StringBuilder();
+	public static StringBuilder lineStore2;
+	public static String [] lineStore3;
+	public static String [] input;
+	public static void main(String[] args) {
+        try {
+            FileReader fr = new FileReader("dec.txt");
+            BufferedReader buf = new BufferedReader(fr);
+
+            String line;
+            while ((line = buf.readLine()) != null) {
+             
+
+            	builder.
+                System.out.println(  lineStore2.length());
+
+
+                
+                
+                
+            }
+
+            buf.close();
+            convertToPig();
+         
+        }
+        catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
+        
+    }
+	
+	
+	public static void convertToPig ()
+	{
+
+		//String lineStore3 [] = word.split(" ");	
+		String re = "a|e|i|O|U|A|E|I|O|U";
+	//	m.reset(word);
+		Pattern p = Pattern.compile(re);
+		Matcher m = p.matcher(lineStore3[0]);
+
+
+		String re2 = "^[aeioAEIOU]";
+
+		Pattern p2 = Pattern.compile(re2);
+		Matcher m2 = p2.matcher(lineStore3[0]);
+
+		
+	
+		for (int i =0; i <lineStore3.length; i++)
+		{
+			m.reset(lineStore3[i]);
+			m2.reset(lineStore3[i]);
+			String test = lineStore3[i];
+			
+			System.out.print(" test" + lineStore2.size());
+			if (m2.find())
+			{
+				System.out.print(" test" + lineStore3[i] );
+				System.out.print(" " + test + "way" + "  ");
+			} 
+		
+			else if (m.find())
+			{
+				String pig = (test.substring(m.start()) + test.substring(0, m.start()) + "ay");
+			 System.out.print(pig);
+			}			
+		}		
+
+	}
+}
+
+

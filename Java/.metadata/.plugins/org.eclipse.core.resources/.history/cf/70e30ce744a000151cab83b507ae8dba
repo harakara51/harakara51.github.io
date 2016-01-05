@@ -1,0 +1,30 @@
+package examples;
+
+
+	import java.awt.*;
+	import javax.swing.*;
+
+	public class Paint extends JPanel
+	{
+		@Override
+		protected void paintComponent(Graphics g) {
+			g.setColor(new java.awt.Color(255, 0, 0));
+			g.drawOval(10, 10, 200, 200);
+			g.setColor(new java.awt.Color(0, 255, 0));
+			g.drawRect(20, 20, 50, 50);
+			g.setColor(new java.awt.Color(0, 0, 255));
+			g.drawString("Hello World", 30, 30);
+		}
+		
+		public static void main(String[] args) {
+			JFrame f = new JFrame();
+			Paint panel = new Paint();
+			f.add(panel, BorderLayout.CENTER);
+			f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+			f.setSize(300,300);
+			f.setVisible(true);
+		}
+	}
+	
+	
+

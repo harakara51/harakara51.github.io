@@ -1,0 +1,93 @@
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JApplet;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
+public class BJtester extends JApplet implements ActionListener
+{
+
+	
+	private int status;
+	private Deckbuilder deck1= new Deckbuilder();
+	JButton b;  
+	JTextField tf; 
+	
+	
+	public void init()      
+	{
+		
+		setSize(600, 600);
+		tf=new JTextField();  
+		tf.setBounds(30,40,150,20);  
+		  
+		b=new JButton("Click");  
+		b.setBounds(80,150,70,40);  
+		  
+		add(b);add(tf);  
+		b.addActionListener(this);  
+		
+
+	}
+	
+	
+	public void paint(Graphics g)
+	{
+		
+		Image card1 = Toolkit.getDefaultToolkit().getImage(deck1.getDeck().get(0).getPath());
+		g.drawImage(card1, 100, 400, 75, 125, this);
+		g.finalize();
+	}
+	
+	
+	
+	
+	
+	
+	
+	public static void main (String[] args)
+	{
+		
+		
+		
+		App canvas = new App ();
+		
+//		for (CardsGUI card :deck1.getDeck())
+//		{
+//			System.out.println(card);
+//		}
+			
+			
+	}
+
+
+
+
+
+
+
+
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		if (e.getActionCommand() == "Start")
+		{
+			status = 3;
+			System.out.println("test");
+			//repaint();
+		}
+		
+	}
+	
+	
+
+}

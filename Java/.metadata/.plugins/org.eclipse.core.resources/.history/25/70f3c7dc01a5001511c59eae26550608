@@ -1,0 +1,45 @@
+package examples;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Acess_log
+{
+	public static List<String> Log = new ArrayList<String>();
+	public static void main(String[] args)
+	{
+		readFile();
+	}
+
+public static void readFile()
+{
+	try (BufferedReader in = new BufferedReader(new FileReader("access_log")))
+	{
+
+		String line = null;
+		while ((line = in.readLine()) != null)
+		{
+			String [] store = line.split(" ");
+			Pattern p = Pattern.compile("a|e|i|O|U|A|E|I|O|U");
+			Matcher m = p.matcher(line);
+			m.reset(line);
+			m.find();
+			String store1 =line.substring(0, m.start());
+			String store2 =line.substring(m.start() +1);
+			//Log.add(store[0]);
+			System.out.println(store1);
+		}
+		
+	} catch (IOException e)
+	{
+		System.err.println(e);
+		System.exit(1);
+	}
+}
+}

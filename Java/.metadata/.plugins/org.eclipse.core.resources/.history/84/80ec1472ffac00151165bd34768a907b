@@ -1,0 +1,92 @@
+import java.applet.Applet;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class App extends Applet implements ActionListener
+{
+	private String Path;
+	private CardsGUI card;
+	private Image Card = null;
+	public static ArrayList<CardsGUI> Deck = new ArrayList<CardsGUI>();
+	Button button1;
+	public void init()
+	{
+		setBackground(Color.GREEN);
+		button1 = new Button("HIT");
+		button1.addActionListener(this);
+		add(button1);
+		
+	}
+	
+	
+	
+	public void paint (Graphics g)
+	{
+		setDeck ();
+	
+		
+
+	
+		Image img1 = Toolkit.getDefaultToolkit().getImage(drawCard().getPath());
+		    g.drawImage(img1, 100, 100, 50, 75, this);
+		    g.finalize();
+	}
+	
+	
+	public void setPath (String path)
+	{
+		this.Path = path;
+	}
+	
+
+	
+	public void setDeck ()
+	{
+
+	String[] suit =
+			{ "Hearts", "Diamonds", "Spades", "Clubs" };
+			int[] number =
+			{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+
+			for (int i = 0; i < suit.length - 1; i++)
+			{
+				for (int k = 0; k < number.length; k++)
+				{
+					int Value;
+
+					int Number = number[k];
+					String Suit = suit[i];
+					String Name = suit[i] + " " + String.valueOf(Number);
+					String Path = "Images/" + Name + ".png";
+					if (k < 10)
+					{
+						Value = number[k];
+					} else
+						Value = 10;
+
+					CardsGUI Card = new CardsGUI(Number, Suit, Name, Path, Value);
+					Deck.add(Card);
+				}
+			}
+	}
+	
+	public  CardsGUI drawCard()
+	{
+		Collections.shuffle(Deck);
+		int random = (int)Math.random()*36;
+		
+		return Deck.get(random);
+	}
+	
+	public void actionPerformed (ActionEvent e)
+	{
+		System.out.println("test");
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Seed.java&apos; to &apos;Bingo/src/Bingo&apos;&#x0A;- Original project: &apos;Java3-Chapter02&apos;&#x0A;- Destination element: &apos;Bingo/src/Bingo&apos;&#x0A;- Original element: &apos;Labs.Seed.java&apos;" description="Copy compilation unit" destination="=Bingo/src&lt;Bingo" element1="/&lt;Labs{Seed.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1451939988370" units="1" version="1.0"/>
+</session>

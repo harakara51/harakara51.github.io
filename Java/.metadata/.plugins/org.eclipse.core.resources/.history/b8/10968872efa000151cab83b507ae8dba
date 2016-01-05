@@ -1,0 +1,19 @@
+package Animal;
+
+class Jackal
+{
+
+	public String voice = "MEddd";
+
+	public Jackal(String voice)
+	{
+		super();
+		this.voice = voice;
+	}
+
+	public Jackal()
+	{
+		System.out.println(voice);
+	}
+
+}

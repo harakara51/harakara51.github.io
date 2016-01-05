@@ -1,0 +1,85 @@
+package examples;
+
+public class Log implements Comparator <Log>
+{
+	private String Address;
+	private String Stuff;
+	private int visits;
+	
+	
+	public Log(String address, String stuff, int visits)
+	{
+		super();
+		Address = address;
+		Stuff = stuff;
+		this.visits = visits;
+	}
+
+
+	/**
+	 * @return the address
+	 */
+	public String getAddress()
+	{
+		return Address;
+	}
+
+
+	/**
+	 * @return the stuff
+	 */
+	public String getStuff()
+	{
+		return Stuff;
+	}
+
+
+	/**
+	 * @return the visits
+	 */
+	public int getVisits()
+	{
+		return visits;
+	}
+
+
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(String address)
+	{
+		Address = address;
+	}
+
+
+	/**
+	 * @param stuff the stuff to set
+	 */
+	public void setStuff(String stuff)
+	{
+		Stuff = stuff;
+	}
+
+
+	/**
+	 * @param visits the visits to set
+	 */
+	public void setVisits(int visits)
+	{
+		this.visits = visits;
+	}
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString()
+	{
+		return "LogEntry [Address=" + Address + ", Stuff=" + Stuff + ", visits=" + visits + "]";
+	}
+	
+	
+	
+	
+}

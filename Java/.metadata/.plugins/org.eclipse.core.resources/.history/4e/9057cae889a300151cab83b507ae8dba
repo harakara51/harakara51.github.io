@@ -1,0 +1,52 @@
+package examples;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+
+public class ReadFiles
+{
+	public static int lineCount;
+	public static String lineStore;
+	public static ArrayList<String> lineStore2 = new ArrayList<String>();
+	public static String [] lineStore3;
+	public static char [] charStore;
+	public static int wordCount;
+	public static int charCount;
+	public static void main(String[] args) {
+        try {
+            FileReader fr = new FileReader("pet.txt");
+            BufferedReader buf = new BufferedReader(fr);
+
+            String line;
+            while ((line = buf.readLine()) != null) {
+                System.out.println(line);
+                lineStore = line;
+             //   lineStore2 = lineStore2 + l
+                lineStore3 = line.split(" ");
+                
+                wordCount = wordCount + lineStore3.length;
+            //    charCount = charCount + lineStore3;
+                
+                for (int i=0; i < lineStore3.length; i++)
+                {
+                	charCount = charCount + lineStore3[i].length();
+                }
+                
+                lineCount++;
+            }
+
+            buf.close();
+            System.out.println(charCount);
+            System.out.println(wordCount);
+            System.out.println(lineCount);
+        }
+        catch (IOException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+}
+
+

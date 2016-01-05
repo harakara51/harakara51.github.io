@@ -1,0 +1,85 @@
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JApplet;
+
+public class BJtester extends JApplet implements ActionListener
+{
+
+	
+	private int status;
+	
+	public void init()      
+	{
+
+		
+		setBackground(Color.green);
+		setSize(600, 600);
+		Button startButton = new Button("Start");
+		Button button2 = new Button("STAND");
+		Button button1 = new Button("HIT");
+
+		
+		
+			startButton.setLocation(200, 150);
+			startButton.setSize(300,250);
+			startButton.addActionListener(this);
+			startButton.setVisible(true);
+			startButton.setSize(100, 100);
+			add(startButton);
+		
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void main (String[] args)
+	{
+		
+		Deckbuilder deck1= new Deckbuilder();
+		
+		App canvas = new App ();
+		
+		for (CardsGUI card :deck1.getDeck())
+		{
+			System.out.println(card);
+		}
+			
+			
+	}
+
+
+
+
+
+
+
+
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		if (e.getActionCommand() == "Start")
+		{
+			status = 3;
+			starGame();
+			//repaint();
+		}
+		
+	}
+	
+	
+
+}

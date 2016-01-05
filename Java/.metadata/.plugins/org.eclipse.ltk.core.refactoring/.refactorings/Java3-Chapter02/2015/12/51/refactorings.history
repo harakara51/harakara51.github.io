@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ShowSortedHits.java&apos; to &apos;examples.ShowSortedHits.java&apos;&#x0A;- Original project: &apos;Java3-Chapter02&apos;&#x0A;- Destination element: &apos;examples.ShowSortedHits.java&apos;&#x0A;- Original element: &apos;examples.ShowSortedHits.java&apos;" description="Copy compilation unit" destination="/&lt;examples{ShowSortedHits.java" element1="/&lt;examples{ShowSortedHits.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1450468383478" units="1" version="1.0"/>
+</session>

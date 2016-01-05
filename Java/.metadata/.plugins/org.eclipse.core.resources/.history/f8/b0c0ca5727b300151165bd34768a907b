@@ -1,0 +1,72 @@
+package Bingo;
+
+public class BingoSeed
+{
+
+	private int Value;
+	String alphabet;
+	private int wins;
+	/**
+	 * @return the name
+	 */
+	public BingoSeed(String name)
+	{
+		super();
+	
+		
+		setValue();
+		this.alphabet = name;
+	}
+	
+	public void setValue()
+	{
+	
+	Value = (int)Math.random()*50;
+	
+	
+	}
+	
+	public int getValue()
+	{
+		
+		return Value;
+	}
+	/**
+	 * @return the seed
+	 */
+	
+	@Override
+	public String toString()
+	{
+		return "Seed [name=" + name + ", value=" + value + ", seed=" + seed + "]";
+	}
+
+
+
+	/**
+	 * @return the wins
+	 */
+	public int getWins()
+	{
+		return wins;
+	}
+
+
+
+	/**
+	 * @param wins the wins to set
+	 */
+	public void setWins(int wins)
+	{
+		this.wins += wins;
+	}
+
+	public void setWins2(int wins)
+	{
+		this.wins = 1;
+	}
+	
+	
+	
+
+}

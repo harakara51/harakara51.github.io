@@ -1,0 +1,12 @@
+package LoO;
+
+import java.util.ArrayList;
+
+public class Maps
+{
+private String Name;
+private String Discription;
+ArrayList<String> item = new ArrayList<String> ();
+
+
+}

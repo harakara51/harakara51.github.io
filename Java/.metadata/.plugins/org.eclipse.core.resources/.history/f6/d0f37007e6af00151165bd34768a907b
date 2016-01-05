@@ -1,0 +1,139 @@
+
+import java.applet.Applet;
+	import java.awt.BorderLayout;
+	import java.awt.Button;
+	import java.awt.Color;
+	import java.awt.Dimension;
+	import java.awt.FlowLayout;
+	import java.awt.Graphics;
+	import java.awt.Image;
+	import java.awt.Toolkit;
+	import java.awt.event.ActionEvent;
+	import java.awt.event.ActionListener;
+	import java.util.ArrayList;
+	import java.util.Collections;
+	import java.util.Random;
+
+	import javax.swing.JApplet;
+	import javax.swing.JOptionPane;
+
+
+public class paint extends Applet
+{
+
+	
+
+	
+		private int random;
+		private static ArrayList<CardsGUI> playerHand = new ArrayList<CardsGUI>();
+		private static ArrayList<CardsGUI> bankerHand = new ArrayList<CardsGUI>();
+		public static ArrayList<CardsGUI> Deck = new ArrayList<CardsGUI>();
+		//
+		private int clicked;
+		private int status;
+		private int playerScore;
+		private int playerScore2;
+		private int aiScore;
+		private int aiScore2;
+
+		public void init()
+		{
+
+			
+			setBackground(Color.green);
+			setSize(600, 600);
+			Button startButton = new Button("Start");
+			Button button2 = new Button("STAND");
+			Button button1 = new Button("HIT");
+
+			if (status == 0)
+			{
+				
+				startButton.setLocation(200, 150);
+				startButton.setSize(300,250);
+	
+				startButton.setVisible(true);
+				startButton.setSize(100, 100);
+				add(startButton);
+				
+
+			}
+
+		
+
+		}
+		
+		void starGame ()
+		{
+			
+			removeAll();
+			setBackground(Color.green);
+			resize(800, 600);
+			
+			Button button2 = new Button("STAND");
+			Button button1 = new Button("HIT");
+			
+			//remove(startButton);
+			
+			//startButton.setVisible(false);
+			button1.setLocation(20, 45);
+	
+			button1.setVisible(true);
+			button1.setSize(30, 75);
+
+			
+			// button2.setLocation(20, 45);
+	
+			// button2.setVisible(true);
+			// button2.setSize(30, 75);
+			// button1.setBounds(200, 450, 50, 50);
+			add(button1);
+			add(button2);
+			repaint();
+		}
+
+		public void paint(Graphics g)
+		{
+	 System.out.println("teste");
+		
+
+
+
+							
+	
+		}
+
+		public void setDeck()
+
+		{
+
+			String[] suit =
+			{ "Hearts", "Diamonds", "Spades", "Clubs" };
+			int[] number =
+			{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+
+			for (int i = 0; i < suit.length - 1; i++)
+			{
+				for (int k = 0; k < number.length; k++)
+				{
+					int Value;
+
+					int Number = number[k];
+					String Suit = suit[i];
+					String Name = suit[i] + " " + String.valueOf(Number);
+					String Path = "Images/" + Name + ".png";
+					if (k < 10)
+					{
+						Value = number[k];
+					} else
+						Value = 10;
+
+					CardsGUI Card = new CardsGUI(Number, Suit, Name, Path, Value);
+					Deck.add(Card);
+				}
+			}
+		}
+
+	
+
+}

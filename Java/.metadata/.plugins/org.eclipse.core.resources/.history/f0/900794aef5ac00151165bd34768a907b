@@ -1,0 +1,12 @@
+
+public class BJtester
+{
+
+	public static void main(String[] args)
+	{
+		Deckbuilder deck = new Deckbuilder();
+		
+			System.out.println(deck.getDeck());
+	}
+
+}
